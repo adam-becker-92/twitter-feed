@@ -1,0 +1,38 @@
+.post {
+    animation: {
+        name: mount;
+        duration: 1s;
+    };
+    border: 1px solid $grey;
+    border-radius: 4px;
+    display: flex;
+    margin: $spacing 0;
+    overflow: hidden;
+    padding: $spacing;
+
+    &__image {
+        background-color: $image-placeholder;
+        border-radius: $image-size/2;
+        height: $image-size;
+        margin-right: $spacing;
+        min-width: $image-size;
+        width: $image-size;
+    }
+
+    &__content {
+        &-username {
+            font-weight: 700;
+            margin-bottom: $spacing/2;
+        }
+    }
+}
+
+@keyframes mount {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
